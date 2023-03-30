@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>가짜 포트폴리오</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <style>
+        input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .container {
+        width: 50%;
+        margin: 0 auto;
+      }
+    </style>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#my-work">My Work</a></li>
+          <li><a href="#contact-me">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about-me">
+        <h2>About Me</h2>
+        <p>안녕하세요. 김은성입니다. 고고미술사학과 주전공생이며, 정보문화학 연합 전공을 하고 있습니다.</p> 
+        <p>제 포트폴리오 사이트에 오신 걸 환영합니다.</p>
+      </section>
+      <section id="my-work">
+        <h2>My Work</h2>
+        <ul>
+          <li>
+            <a href="https://namu.wiki/w/온앤오프">
+              <img src="1moreyear.png" alt="1 more year">
+              <h3>졸업 논문 및 프로젝트</h3>
+            </a>
+          </li>
+          <li>
+            <a href="https://my.snu.ac.kr/">
+              <img src="building.jpeg" alt="building">
+              <h3>사진 작업물</h3>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section id="contact-me">
+        <h2>Contact Me</h2>
+        <p>이메일: bluebird7179@snu.ac.kr</p>
+        <p>전화번호: 010-2023-0321</p>
+      </section>
+
+      <div class="container">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name">
+  
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Enter your email address">
+  
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 My Portfolio</p>
+    </footer>
+  </body>
+</html>

@@ -1,15 +1,15 @@
-// DOM 조작하기
 const myParagraph = document.getElementById("my-paragraph");
 
-myParagraph.innerHTML = "This is a new paragraph.";
-myParagraph.style.color = "red";
+myParagraph.innerHTML = "Turn on the sound, and pat the cat!";
+myParagraph.style.color = "pink";
 
-// 이벤트 처리 방법
 const myButton = document.getElementById("my-button");
 
 myButton.addEventListener("click", function () {
   const actionStatus = document.getElementById("action-status");
   let clickStatus = document.createElement("div");
-  clickStatus.innerHTML = "Button clicked!";
+  clickStatus.innerHTML = "Meow";
   actionStatus.appendChild(clickStatus);
+  var audio = new Audio("catmeow.mp3");
+  audio.play();
 });

@@ -2,15 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>JavaScript Sample</title>
+    <title>Pat the cat</title>
   </head>
   <body>
-    <h1>JavaScript Sample</h1>
+    <h1>PAT THE CAT</h1>
 
-    <p id="my-paragraph">This is a sample paragraph.</p>
-    <button id="my-button">Click me!</button>
-    <p id="action-status">Action Status:</p>
+    <p id="my-paragraph">let's make it</p>
+    <button onclick="playSound()" id="my-button"> 
+      <img src = "kitten.png"></button>
+    <p id="action-status">What does the cat say?</p>
 
-    <script src="dom.js"></script>
+    <script src="dom.js">
+      function playSound() {
+        var audio = new Audio("catmeow.mp3");
+        audio.play();
+      }
+    </script>
   </body>
 </html>

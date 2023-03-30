@@ -2,46 +2,56 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>JavaScript Sample</title>
+    <title>Pat the dog</title>
+    <style>
+      img{
+        width: 500px;
+        height: 500px;
+      }
+    </style>
     <script>
       window.onload = function () {
-        // DOM 조작하기
         let statusNum = 1;
         const myParagraph = document.getElementById("my-paragraph");
 
-        myParagraph.innerHTML = "This is a new paragraph.";
-        myParagraph.style.color = "red";
+        myParagraph.innerHTML = "I'm gonna show you my doggy. Turn on the sound and give him a treat.";
+        myParagraph.style.color = "skyblue";
 
-        // 이벤트 처리 방법
         const addButton = document.getElementById("add-button");
 
         addButton.addEventListener("click", function () {
           const actionStatus = document.getElementById("action-status");
-
+          var audio = new Audio("bark.mp3");
+          audio.play();
           let clickStatus = document.createElement("div");
           clickStatus.setAttribute("class", "status");
-          clickStatus.innerHTML = String(statusNum) + ": Button clicked!";
+          clickStatus.innerHTML = "I gave him " + String(statusNum) + " treats";
           statusNum += 1;
 
           actionStatus.appendChild(clickStatus);
         });
 
         const delButton = document.getElementById("del-button");
-
         delButton.addEventListener("click", function () {
-          const status = document.getElementsByClassName("status");
-          status[status.length - 1].remove();
-          statusNum -= 1;
+          var audio = new Audio("howl.mp3");
+          audio.play();
+          var img = document.getElementById("pageImg");
+          if(img.src.match("puppy.png")) {
+            img.src = "puppy2.png";
+          } else{
+            img.src = "puppy.png";
+          }
+
         });
       };
     </script>
   </head>
   <body>
-    <h1>JavaScript Sample</h1>
-
+    <h1>PAT THE DOG</h1>
+    <img id = "pageImg" src = "puppy.png">
     <p id="my-paragraph">This is a sample paragraph.</p>
-    <button id="add-button">Add Status</button>
-    <button id="del-button">Delete Status</button>
-    <p id="action-status">Action Status:</p>
+    <button id="add-button">Give him a treat</button>
+    <button id="del-button">No more treat today</button>
+    <p id="action-status">Today...</p>
   </body>
 </html>
